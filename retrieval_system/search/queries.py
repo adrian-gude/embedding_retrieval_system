@@ -31,15 +31,15 @@ def main():
     )
 
     for query_idx, query in enumerate(queries):
-        print(f"\nResultados para la consulta: '{query}'")
-        print(f"Índices de las noticias más cercanas: {indices[query_idx]}")
-        print(f"Distancias de las noticias más cercanas: {distances[query_idx]}")
+        print(f"\nResults for query: '{query}'")
+        print(f"Indices of the closest news articles: {indices[query_idx]}")
+        print(f"Distances of the closest news articles: {distances[query_idx]}")
 
         for idx in indices[query_idx]:
             title = df.loc[idx, "title"]
             content = df.loc[idx, "content"]
-            print(f"Título: {title}")
-            print(f"Contenido: {content[:200]}...")
+            print(f"Title: {title}")
+            print(f"Content: {content[:200]}...")  # Show only the first 200 characters
             print("\n" + "-" * 80 + "\n")
 
 
